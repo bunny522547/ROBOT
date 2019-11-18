@@ -44,6 +44,12 @@
         $arrayPostData['messages'][0]['text'] = "ราคาปุ๋ยที่มีวางจำหน่าย"."\n"."https://docs.google.com/document/d/1CJaSBeO7fPn5N9c0lXvK2z7MOp6qqiL-WqSRVJ24dAg/edit.";
         replyMsg($arrayHeader,$arrayPostData);
     }
+    else if($message == "4"){
+        $arrayPostData['replyToken'] = $arrayJson['events'][0]['replyToken'];
+        $arrayPostData['messages'][0]['type'] = "text";
+        $arrayPostData['messages'][0]['text'] = "ราคายางวันนี้ การยางแห่งประเทศไทย"."\n"."http://www.rubber.co.th/rubber2012/menu5.php";
+        replyMsg($arrayHeader,$arrayPostData);
+    }
     else if($message == "ฝันดี"){
         $arrayPostData['replyToken'] = $arrayJson['events'][0]['replyToken'];
         $arrayPostData['messages'][0]['type'] = "sticker";
