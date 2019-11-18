@@ -32,8 +32,13 @@
         $arrayPostData['messages'][0]['text'] = "เว็บไซต์ทางการของการยางแห่งประเทศไทย"."\n"."http://www.raot.co.th/main.php?filename=index.";
         replyMsg($arrayHeader,$arrayPostData);
     }
- 
-    #ตัวอย่าง Message Type "Sticker"
+    else if($message == "2"){
+        $arrayPostData['replyToken'] = $arrayJson['events'][0]['replyToken'];
+        $arrayPostData['messages'][0]['type'] = "text";
+        $arrayPostData['messages'][0]['text'] = "ข้อมูลข่าวสารของยางพารา การยางแห่งประเทศไทย"."\n"."http://www.raot.co.th/more_news.php?cid=10&filename=index/.";
+        replyMsg($arrayHeader,$arrayPostData);
+    }
+   
     else if($message == "ฝันดี"){
         $arrayPostData['replyToken'] = $arrayJson['events'][0]['replyToken'];
         $arrayPostData['messages'][0]['type'] = "sticker";
@@ -45,7 +50,6 @@
         replyMsg($arrayHeader,$arrayPostData);
     }
 
-    #ตัวอย่าง Message Type "Text + Sticker ใน 1 ครั้ง"
     else if($message == "ลาก่อน"){
         $arrayPostData['replyToken'] = $arrayJson['events'][0]['replyToken'];
         $arrayPostData['messages'][0]['type'] = "text";
