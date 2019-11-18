@@ -14,7 +14,7 @@
     if($message == "สวัสดี"){
         $arrayPostData['replyToken'] = $arrayJson['events'][0]['replyToken'];
         $arrayPostData['messages'][0]['type'] = "text";
-        $arrayPostData['messages'][0]['text'] = "สวัสดีจ้าาา";
+        $arrayPostData['messages'][0]['text'] = "สวัสดีครับ กรุณาพิมพ์ เมนู เพื่อดูเมนูของเราได้เลยครับ";
         $arrayPostData['messages'][1]['type'] = "sticker";
         $arrayPostData['messages'][1]['packageId'] = "11538";
         $arrayPostData['messages'][1]['stickerId'] = "51626494";
@@ -23,7 +23,13 @@
     else if($message == "เมนู"){
         $arrayPostData['replyToken'] = $arrayJson['events'][0]['replyToken'];
         $arrayPostData['messages'][0]['type'] = "text";
-        $arrayPostData['messages'][0]['text'] = "กรุณาพิมพ์ข้อความต่อไปนี้"."\n"." (1) เว็บไซต์ OTOP"."\n"." (2) พื้นที่ผิวที่น้อยที่สุดของปริซึมสี่เหลี่ยมมุนฉาก"."\n"." (3) พื้นที่ผิวที่น้อยที่สุดของทรงกระบอก"."\n"." (4) พิกัด OTOP จังหวัดตรัง"."\n"." (5) FB : ช่องทางการติดต่อ "."\n"." (6) ตำแหน่งที่ตั้งแอดมิน ";
+        $arrayPostData['messages'][0]['text'] = "พิมพ์ตัวอักษรตามที่กำหนดให้"."\n"."[1] เว็บไซต์ทางการของการยางแห่งประเทศไทย"."\n"."[2] ข้อมูลข่าวสารเกี่ยวกับยางพารา" . "\n"."[3] ราคาปุ๋ยที่มีวางจำหน่ายในสหกรณ์การเกษตรจังหวัดตรัง" ."\n"."[4] ราคายาง" . "\n" . "[5] ราคาของปุ๋ยยางพาราที่ถูกที่สุดในช่วงอายุต่างๆ" . "\n"  . "[6] วิธีการผสมปุ๋ยใช้เอง"."\n"."[7] ตารางคำนวณสูตรปุ๋ยเคมียางพารา"."\n"."[8] ตารางคำนวณสูตรปุ๋ยอินทรีย์ยางพารา"."\n". "[9] ข้อมูลสภาพอากาศจากกรมอุตุนิยมวิทยา"."\n". "[10] กราฟกำหนดการเชิงเส้นแสดงต้นทุนที่ต่ำที่สุดของการใส่ปุ๋ยอินทรีย์ควบคู่กับปุ๋ยเคมี"."\n". "[11] แผนภูมิแท่งแสดงการเปรียบเทียบราคาของปุ๋ยเคมี ปุ๋ยผสม และปุ๋ยอินทรย์ ";
+        replyMsg($arrayHeader,$arrayPostData);
+    }
+    else if($message == "1"){
+        $arrayPostData['replyToken'] = $arrayJson['events'][0]['replyToken'];
+        $arrayPostData['messages'][0]['type'] = "text";
+        $arrayPostData['messages'][0]['text'] = "เว็บไซต์ทางการของการยางแห่งประเทศไทย"."\n"."http://www.raot.co.th/main.php?filename=index.";
         replyMsg($arrayHeader,$arrayPostData);
     }
  
