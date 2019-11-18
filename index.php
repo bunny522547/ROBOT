@@ -38,7 +38,12 @@
         $arrayPostData['messages'][0]['text'] = "ข้อมูลข่าวสารของยางพารา การยางแห่งประเทศไทย"."\n"."http://www.raot.co.th/more_news.php?cid=10&filename=index/.";
         replyMsg($arrayHeader,$arrayPostData);
     }
-   
+   else if($message == "3"){
+        $arrayPostData['replyToken'] = $arrayJson['events'][0]['replyToken'];
+        $arrayPostData['messages'][0]['type'] = "text";
+        $arrayPostData['messages'][0]['text'] = "ราคาปุ๋ยที่มีวางจำหน่าย"."\n"."https://docs.google.com/document/d/1CJaSBeO7fPn5N9c0lXvK2z7MOp6qqiL-WqSRVJ24dAg/edit.";
+        replyMsg($arrayHeader,$arrayPostData);
+    }
     else if($message == "ฝันดี"){
         $arrayPostData['replyToken'] = $arrayJson['events'][0]['replyToken'];
         $arrayPostData['messages'][0]['type'] = "sticker";
