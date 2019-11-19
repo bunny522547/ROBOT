@@ -56,12 +56,12 @@
         $arrayPostData['messages'][0]['text'] = "ราคาปุ๋ยยางพาราที่ถูกที่สุดในช่งอายุต่าง ๆ"."\n"."https://docs.google.com/document/d/1xnbQIHYP_yboKn3CEE819JvgdpLwhJVhgp2aACyc-ww/edit";
         replyMsg($arrayHeader,$arrayPostData);
     }
-   /*else if($message == "6"){
+   else if($message == "6"){
         $arrayPostData['replyToken'] = $arrayJson['events'][0]['replyToken'];
         $arrayPostData['messages'][0]['type'] = "text";
-        $arrayPostData['messages'][0]['text'] = "วิธีการผสมปุ๋ยใช้เอง"."\n"."https://docs.google.com/document/d/1xnbQIHYP_yboKn3CEE819JvgdpLwhJVhgp2aACyc-ww/edit";
+        $arrayPostData['messages'][0]['text'] = "วิธีการผสมปุ๋ยใช้เอง ข้อมูลจาก Nanagarden"."\n"."https://www.nanagarden.com/topic/3829.";
         replyMsg($arrayHeader,$arrayPostData);
-    }*/
+    }
     else if($message == "ฝันดี"){
         $arrayPostData['replyToken'] = $arrayJson['events'][0]['replyToken'];
         $arrayPostData['messages'][0]['type'] = "sticker";
