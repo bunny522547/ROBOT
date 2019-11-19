@@ -62,6 +62,20 @@
         $arrayPostData['messages'][0]['text'] = "วิธีการผสมปุ๋ยใช้เอง ข้อมูลจาก Nanagarden"."\n"."https://www.nanagarden.com/topic/3829.";
         replyMsg($arrayHeader,$arrayPostData);
     }
+    else if($message == "7"){
+        $arrayPostData['replyToken'] = $arrayJson['events'][0]['replyToken'];
+        $arrayPostData['messages'][0]['type'] = "text";
+        $arrayPostData['messages'][0]['text'] = "ตารางคำนวณแม่ปุ๋ยเพื่อนำมาผสมใช้เอง"; 
+        $arrayPostData['messages'][1]['type'] = "text";
+        $arrayPostData['messages'][1]['text'] = "ตารางคำนวณแม่ปุ๋ยที่ต้องใช้ผสมสำหรับต้นยางพาราอายุ 1-2 ปี" . "\n" . "https://docs.google.com/spreadsheets/d/1yxyKW8J8k6Hdlef9rYIQ7JTLuCBkWy-OpdX2qwcgAOI/edit?usp=sharing" ;
+        $arrayPostData['messages'][2]['type'] = "text";
+        $arrayPostData['messages'][2]['text'] = "ตารางคำนวณหาแม่ปุ๋ยที่ต้องใช้ผสมสำหรับต้นยางพาราอายุ 3-6 ปี" . "\n" . "https://docs.google.com/spreadsheets/d/1Q4aMY6mTPNjBixSWrLwJc2_mB-wQRN9JT9WAVRor_Yg/edit?usp=sharing";
+        $arrayPostData['messages'][3]['type'] = "text";
+        $arrayPostData['messages'][3]['text'] = "ตารางคำนวณหาแม่ปุ๋ยที่ต้องนำมาผสมสำหรับต้นยางพาราอายุ 7-15 ปี" . "\n"  . "https://docs.google.com/spreadsheets/d/1LaqiA_QfwTmdsTpK0e-1zTmz9b_73B_FZyatD1CxaHA/edit?usp=sharing";
+        $arrayPostData['messages'][4]['type'] = "text";
+        $arrayPostData['messages'][4]['text'] = "ตารางคำนวณหาแม่ปุ๋ยเพื่อนำมาผสมสำหรับต้นยางพาราอายุ 15 ปี ขึ้นไป" . "\n" . "https://docs.google.com/spreadsheets/d/1Isz8tFcyylk-i807Bz0uJOdBsARkvOutCrP47CAnOeI/edit?usp=sharing";
+        replyMsg($arrayHeader,$arrayPostData);
+    }
     else if($message == "ฝันดี"){
         $arrayPostData['replyToken'] = $arrayJson['events'][0]['replyToken'];
         $arrayPostData['messages'][0]['type'] = "sticker";
