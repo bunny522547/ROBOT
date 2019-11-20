@@ -65,7 +65,7 @@
     else if($message == "7"){
         $arrayPostData['replyToken'] = $arrayJson['events'][0]['replyToken'];
         $arrayPostData['messages'][0]['type'] = "text";
-        $arrayPostData['messages'][0]['text'] = "ตารางคำนวณแม่ปุ๋ยเพื่อนำมาผสมใช้เอง"; 
+        $arrayPostData['messages'][0]['text'] = "ตารางคำนวณแม่ปุ๋ยเพื่อนำมาผสมใช้เอง"."\n"."กรุณาดาวน์โหลดแอปพลิเคชัน google sheet ก่อนการใช้งาน ; 
         $arrayPostData['messages'][1]['type'] = "text";
         $arrayPostData['messages'][1]['text'] = "ตารางคำนวณแม่ปุ๋ยที่ต้องใช้ผสมสำหรับต้นยางพาราอายุ 1-2 ปี" . "\n" . "https://docs.google.com/spreadsheets/d/1yxyKW8J8k6Hdlef9rYIQ7JTLuCBkWy-OpdX2qwcgAOI/edit?usp=sharing" ;
         $arrayPostData['messages'][2]['type'] = "text";
@@ -76,6 +76,20 @@
         $arrayPostData['messages'][4]['text'] = "ตารางคำนวณหาแม่ปุ๋ยเพื่อนำมาผสมสำหรับต้นยางพาราอายุ 15 ปี ขึ้นไป" . "\n" . "https://docs.google.com/spreadsheets/d/1Isz8tFcyylk-i807Bz0uJOdBsARkvOutCrP47CAnOeI/edit?usp=sharing";
         replyMsg($arrayHeader,$arrayPostData);
     }
+   /* else if($message == "8"){
+        $arrayPostData['replyToken'] = $arrayJson['events'][0]['replyToken'];
+        $arrayPostData['messages'][0]['type'] = "text";
+        $arrayPostData['messages'][0]['text'] = "ตารางคำนวณวัสดุธรมมชาติเพื่อนำมาผสมปุ๋ยอินทรีย์ใช้เอง" ."\n" . "กรุณาดาวน์โหลดแอปพลิเคชัน google sheeet ก่อนการใช้งาน" ;  . "\n" . "ตารางคำนวณหาวัสดุธรรมชาติที่ต้องใช้ผสมสำหรับต้นยางพาราอายุ 3-6 ปี" . "\n" . "https://docs.google.com/spreadsheets/d/10-aPIUTM_T58qTz87_jteDqnXX77ThUyNvoZN3ScVlE/edit?usp=sharing" . "\n" . "ตารางคำนวณหาวัสดุธรรมชาติที่ต้องนำมาผสมสำหรับต้นยางพาราอายุ 7-15 ปี" . "\n"  . "https://docs.google.com/spreadsheets/d/1noUErwTSVrSM6Q5SOERBehdDcYAYG4Ax3D4kfB1dobo/edit?usp=sharing" . "\n" . "ตารางคำนวณหาวัสดุธรรมชาติเพื่อนำมาผสมสำหรับต้นยางพาราอายุ 15 ปี ขึ้นไป" . "\n" . "https://docs.google.com/spreadsheets/d/1P4BTIeIR2nBpEtkUv-jK2wU8dalWeGg5gNHUAYRMfmY/edit?usp=sharing" . "\n" . "[H] เพื่อดูเมนู"]; 
+        $arrayPostData['messages'][1]['type'] = "text";
+        $arrayPostData['messages'][1]['text'] = "ตารางคำนวณวัสดุธรรมชาติที่ต้องใช้ผสมสำหรับต้นยางพาราอายุ 1-2 ปี" . "\n" . "https://docs.google.com/spreadsheets/d/1a3Qgu63WHxpMRAsqVUwoNMLoXYa9eFoZBOmZ5Oi1WKY/edit?usp=sharing" ;
+        $arrayPostData['messages'][2]['type'] = "text";
+        $arrayPostData['messages'][2]['text'] = "ตารางคำนวณหาแม่ปุ๋ยที่ต้องใช้ผสมสำหรับต้นยางพาราอายุ 3-6 ปี" . "\n" . "https://docs.google.com/spreadsheets/d/1Q4aMY6mTPNjBixSWrLwJc2_mB-wQRN9JT9WAVRor_Yg/edit?usp=sharing";
+        $arrayPostData['messages'][3]['type'] = "text";
+        $arrayPostData['messages'][3]['text'] = "ตารางคำนวณหาแม่ปุ๋ยที่ต้องนำมาผสมสำหรับต้นยางพาราอายุ 7-15 ปี" . "\n"  . "https://docs.google.com/spreadsheets/d/1LaqiA_QfwTmdsTpK0e-1zTmz9b_73B_FZyatD1CxaHA/edit?usp=sharing";
+        $arrayPostData['messages'][4]['type'] = "text";
+        $arrayPostData['messages'][4]['text'] = "ตารางคำนวณหาแม่ปุ๋ยเพื่อนำมาผสมสำหรับต้นยางพาราอายุ 15 ปี ขึ้นไป" . "\n" . "https://docs.google.com/spreadsheets/d/1Isz8tFcyylk-i807Bz0uJOdBsARkvOutCrP47CAnOeI/edit?usp=sharing";
+        replyMsg($arrayHeader,$arrayPostData);
+    }*/
     else if($message == "ฝันดี"){
         $arrayPostData['replyToken'] = $arrayJson['events'][0]['replyToken'];
         $arrayPostData['messages'][0]['type'] = "sticker";
