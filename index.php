@@ -79,7 +79,7 @@
    else if($message == "8"){
         $arrayPostData['replyToken'] = $arrayJson['events'][0]['replyToken'];
         $arrayPostData['messages'][0]['type'] = "text";
-        $arrayPostData['messages'][0]['text'] = "ตารางคำนวณวัสดุธรมมชาติเพื่อนำมาผสมปุ๋ยอินทรีย์ใช้เอง" ."\n" . "[H] เพื่อดูเมนู"]; 
+        $arrayPostData['messages'][0]['text'] = "ตารางคำนวณวัสดุธรมมชาติเพื่อนำมาผสมปุ๋ยอินทรีย์ใช้เอง" ."\n" . "[H] เพื่อดูเมนู"; 
         $arrayPostData['messages'][1]['type'] = "text";
         $arrayPostData['messages'][1]['text'] = "ตารางคำนวณวัสดุธรรมชาติที่ต้องใช้ผสมสำหรับต้นยางพาราอายุ 1-2 ปี" . "\n" . "https://docs.google.com/spreadsheets/d/1a3Qgu63WHxpMRAsqVUwoNMLoXYa9eFoZBOmZ5Oi1WKY/edit?usp=sharing" ;
         $arrayPostData['messages'][2]['type'] = "text";
