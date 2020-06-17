@@ -60,7 +60,7 @@
     else if($message == "7"){
         $arrayPostData['replyToken'] = $arrayJson['events'][0]['replyToken'];
         $arrayPostData['messages'][0]['type'] = "text";
-        $arrayPostData['messages'][0]['text'] = "https://changeagriculture.000webhostapp.com/" ; 
+        $arrayPostData['messages'][0]['text'] = "https://stark-savannah-41843.herokuapp.com/" ; 
      
         replyMsg($arrayHeader,$arrayPostData);
     }
